@@ -5,21 +5,28 @@
 (function () {
     "use strict";
 
+    //Cordova deviceready eventi dinliyoruz
     document.addEventListener( 'deviceready', onDeviceReady.bind( this ), false );
 
+    //uygulama yüklendiği anda çalışır
     function onDeviceReady() {
-        // Handle the Cordova pause and resume events
+        //Cordova pause ve resume eventlerini dinliyoruz
         document.addEventListener( 'pause', onPause.bind( this ), false );
         document.addEventListener( 'resume', onResume.bind( this ), false );
         
         // TODO: Cordova has been loaded. Perform any initialization that requires Cordova here.
+        alert('cihaz hazır');
     };
 
+    //uygulama durduğu anda çalışır
     function onPause() {
         // TODO: This application has been suspended. Save application state here.
     };
 
+    //uygulama tekrar aktif hale geldiği zaman çalışmaya başlar
     function onResume() {
         // TODO: This application has been reactivated. Restore application state here.
+        alert('resume başladı!')
     };
-} )();
+   
+})();
